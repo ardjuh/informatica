@@ -57,8 +57,15 @@ namespace _8._12_eindopdracht
 
             if (selectedCar.containPicture())
             {
-                Bitmap bit = new Bitmap(selectedCar.picture);
-                carPictureBox.Image = bit;
+                try
+                {
+                    Bitmap bit = new Bitmap(selectedCar.picture);
+                    carPictureBox.Image = bit;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine($"{selectedCar.picture} doesn't exist");
+                }
             }
         }
 
@@ -102,7 +109,7 @@ namespace _8._12_eindopdracht
             File.WriteAllText(filePath, x);
         }
 
-        private bool checkSelectedCar() => (carComboBox.SelectedIndex > -1);
+        private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;
 
         private void carGarageForm_Load(object sender, EventArgs e)
         {
@@ -116,15 +123,15 @@ namespace _8._12_eindopdracht
                     {
                         y.AddRange(word.Split('='));
                     }
-                    string brand = y[y.IndexOf("Merk") + 1];
-                    string type = y[y.IndexOf("Type") + 1];
-                    string color = y[y.IndexOf("Kleur") + 1];
-                    int numberOfDoors = int.Parse(y[y.IndexOf("AantalDeuren") + 1]);
-                    double price = double.Parse(y[y.IndexOf("Vraagprijs") + 1]);
+                    string brand = y[1];
+                    string type = y[3];
+                    string color = y[5];
+                    int numberOfDoors = int.Parse(y[7]);
+                    double price = double.Parse(y[9]);
                     string picture = "";
-                    if (y.Contains("Afbeelding"))
+                    if (y[11] != "")
                     {
-                        picture = y[y.IndexOf("Afbeelding") + 1];
+                        picture = y[11];
                     }
                     Car newCar = new Car(
                         brand, 

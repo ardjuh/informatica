@@ -34,7 +34,7 @@ namespace _8._12_eindopdracht
 
         public string giveName() => brand + " " + type;
 
-        public bool containPicture() => (picture.Length > 0);
+        public bool containPicture() => picture.Length > 0;
 
         public void changePrice(double newPrice) => price = newPrice;
 
