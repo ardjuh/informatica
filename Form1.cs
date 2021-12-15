@@ -49,13 +49,13 @@ namespace _8._12_eindopdracht
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Car selectedCar = (Car)carComboBox.SelectedItem;
-            brandAndTypeLabel.Text = selectedCar.giveName();
+            brandAndTypeLabel.Text = selectedCar.getName();
             colorLabel.Text = selectedCar.color;
             colorRichTextBox.BackColor = Color.FromName(selectedCar.color);
             numberOfDoorsLabel.Text = selectedCar.numberOfDoors.ToString();
-            priceLabel.Text = selectedCar.givePrice();
+            priceLabel.Text = selectedCar.getPrice();
 
-            if (selectedCar.containPicture())
+            if (selectedCar.containsPicture())
             {
                 try
                 {
@@ -88,7 +88,7 @@ namespace _8._12_eindopdracht
             if (checkSelectedCar())
             {
                 Car selectedCar = (Car)carComboBox.SelectedItem;
-                selectedCar.changePrice(double.Parse(changePriceTextBox.Text));
+                selectedCar.setPrice(double.Parse(changePriceTextBox.Text));
             }
         }
 

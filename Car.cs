@@ -32,13 +32,13 @@ namespace _8._12_eindopdracht
             picture = _picture;
         }
 
-        public string giveName() => brand + " " + type;
+        public string getName() => brand + " " + type;
 
-        public bool containPicture() => picture.Length > 0;
+        public bool containsPicture() => picture.Length > 0;
 
-        public void changePrice(double newPrice) => price = newPrice;
+        public void setPrice(double newPrice) => price = newPrice;
 
-        public string givePrice()
+        public string getPrice()
         {
             double roundedPrice = Math.Round(price, 2);
             string textPrice = "€ " + roundedPrice.ToString();
