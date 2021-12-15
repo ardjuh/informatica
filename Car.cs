@@ -44,5 +44,7 @@ namespace _8._12_eindopdracht
             string textPrice = "€ " + roundedPrice.ToString();
             return textPrice;
         }
+
+        public override string ToString() => getName(); // Combobox accesses this function
     }
 }

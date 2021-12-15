@@ -17,6 +17,8 @@ namespace _8._12_eindopdracht
         public carGarageForm()
         {
             InitializeComponent();
+
+            // Get path of stock.settings
             string directory = Directory.GetCurrentDirectory();
             directory = directory.Substring(0, directory.IndexOf("bin"));
             filePath = $"{directory}stock.settings";
@@ -92,25 +94,6 @@ namespace _8._12_eindopdracht
             }
         }
 
-        private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string x = "";
-            foreach (object car in carComboBox.Items)
-            {
-                Car auto = (Car)car;
-                x += "Merk=" + auto.brand +
-                    ";Type=" + auto.type +
-                    ";Kleur=" + auto.color +
-                    ";AantalDeuren=" + auto.numberOfDoors +
-                    ";Vraagprijs=" + auto.price +
-                    ";Afbeelding=" + auto.picture +
-                    "\n";
-            }
-            File.WriteAllText(filePath, x);
-        }
-
-        private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;
-
         private void carGarageForm_Load(object sender, EventArgs e)
         {
             if (File.ReadAllText(filePath).Length > 0)
@@ -123,6 +106,7 @@ namespace _8._12_eindopdracht
                     {
                         y.AddRange(word.Split('='));
                     }
+
                     string brand = y[1];
                     string type = y[3];
                     string color = y[5];
@@ -134,16 +118,35 @@ namespace _8._12_eindopdracht
                         picture = y[11];
                     }
                     Car newCar = new Car(
-                        brand, 
-                        type, 
-                        color, 
-                        numberOfDoors, 
-                        price, 
+                        brand,
+                        type,
+                        color,
+                        numberOfDoors,
+                        price,
                         picture
                     );
                     carComboBox.Items.Add(newCar);
                 }
             }
         }
+
+        private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string x = "";
+            foreach (object car in carComboBox.Items)
+            {
+                Car auto = (Car)car;
+                x += "brand=" + auto.brand +
+                    ";type=" + auto.type +
+                    ";color=" + auto.color +
+                    ";numberOfDoorsn=" + auto.numberOfDoors +
+                    ";price=" + auto.price +
+                    ";picture=" + auto.picture +
+                    "\n";
+            }
+            File.WriteAllText(filePath, x);
+        }
+
+        private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;
     }
 }
