@@ -13,15 +13,17 @@ namespace _8._12_eindopdracht
 {
     public partial class carGarageForm : System.Windows.Forms.Form
     {
-        private string filePath = "";
+        private string settingsPath = "";
+        private string directory = "";
+
         public carGarageForm()
         {
             InitializeComponent();
 
             // Get path of stock.settings
-            string directory = Directory.GetCurrentDirectory();
+            directory = Directory.GetCurrentDirectory();
             directory = directory.Substring(0, directory.IndexOf("bin"));
-            filePath = $"{directory}stock.settings";
+            settingsPath = $"{directory}stock.settings";
         }
 
         private void addCarButton_Click(object sender, EventArgs e)
@@ -51,9 +53,9 @@ namespace _8._12_eindopdracht
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Car selectedCar = (Car)carComboBox.SelectedItem;
+
             brandAndTypeLabel.Text = selectedCar.getName();
-            colorLabel.Text = selectedCar.color;
-            colorRichTextBox.BackColor = Color.FromName(selectedCar.color);
+            colorLabel.BackColor = Color.FromName(selectedCar.color);
             numberOfDoorsLabel.Text = selectedCar.numberOfDoors.ToString();
             priceLabel.Text = selectedCar.getPrice();
 
@@ -61,13 +63,18 @@ namespace _8._12_eindopdracht
             {
                 try
                 {
-                    Bitmap bit = new Bitmap(selectedCar.picture);
+                    Bitmap bit = new Bitmap(directory + selectedCar.picture);
                     carPictureBox.Image = bit;
+                    carPictureBox.Show();
                 }
                 catch (Exception)
                 {
                     Console.WriteLine($"{selectedCar.picture} doesn't exist");
                 }
+            }
+            else
+            {
+                carPictureBox.Hide();
             }
         }
 
@@ -96,9 +103,9 @@ namespace _8._12_eindopdracht
 
         private void carGarageForm_Load(object sender, EventArgs e)
         {
-            if (File.ReadAllText(filePath).Length > 0)
+            if (File.ReadAllText(settingsPath).Length > 0)
             {
-                List<string> cars = File.ReadLines(filePath).ToList();
+                List<string> cars = File.ReadLines(settingsPath).ToList();
                 foreach (string car in cars)
                 {
                     List<string> y = new List<string>();
@@ -144,7 +151,7 @@ namespace _8._12_eindopdracht
                     ";picture=" + auto.picture +
                     "\n";
             }
-            File.WriteAllText(filePath, x);
+            File.WriteAllText(settingsPath, x);
         }
 
         private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;

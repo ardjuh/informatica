@@ -30,7 +30,6 @@ namespace _8._12_eindopdracht
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.colorRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@ namespace _8._12_eindopdracht
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.colorRichTextBox);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -90,20 +88,9 @@ namespace _8._12_eindopdracht
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(777, 340);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Voorraad";
-            // 
-            // colorRichTextBox
-            // 
-            this.colorRichTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.colorRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.colorRichTextBox.Location = new System.Drawing.Point(291, 25);
-            this.colorRichTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.colorRichTextBox.Name = "colorRichTextBox";
-            this.colorRichTextBox.Size = new System.Drawing.Size(89, 38);
-            this.colorRichTextBox.TabIndex = 12;
-            this.colorRichTextBox.Text = "";
             // 
             // label12
             // 
@@ -158,7 +145,7 @@ namespace _8._12_eindopdracht
             this.carComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carComboBox.Name = "carComboBox";
             this.carComboBox.Size = new System.Drawing.Size(242, 28);
-            this.carComboBox.TabIndex = 6;
+            this.carComboBox.TabIndex = 1;
             this.carComboBox.SelectedIndexChanged += new System.EventHandler(this.carComboBox_SelectedIndexChanged);
             // 
             // label1
@@ -191,8 +178,9 @@ namespace _8._12_eindopdracht
             this.colorLabel.AutoSize = true;
             this.colorLabel.Location = new System.Drawing.Point(178, 215);
             this.colorLabel.Name = "colorLabel";
-            this.colorLabel.Size = new System.Drawing.Size(0, 20);
+            this.colorLabel.Size = new System.Drawing.Size(41, 20);
             this.colorLabel.TabIndex = 1;
+            this.colorLabel.Text = "        ";
             // 
             // brandAndTypeLabel
             // 
@@ -233,7 +221,7 @@ namespace _8._12_eindopdracht
             this.addCarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addCarButton.Name = "addCarButton";
             this.addCarButton.Size = new System.Drawing.Size(251, 40);
-            this.addCarButton.TabIndex = 13;
+            this.addCarButton.TabIndex = 9;
             this.addCarButton.Text = "Toevoegen";
             this.addCarButton.UseVisualStyleBackColor = true;
             this.addCarButton.Click += new System.EventHandler(this.addCarButton_Click);
@@ -244,7 +232,7 @@ namespace _8._12_eindopdracht
             this.selectPictureButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectPictureButton.Name = "selectPictureButton";
             this.selectPictureButton.Size = new System.Drawing.Size(107, 31);
-            this.selectPictureButton.TabIndex = 12;
+            this.selectPictureButton.TabIndex = 8;
             this.selectPictureButton.Text = "Selecteer...";
             this.selectPictureButton.UseVisualStyleBackColor = true;
             this.selectPictureButton.Click += new System.EventHandler(this.selectPictureButton_Click);
@@ -255,7 +243,7 @@ namespace _8._12_eindopdracht
             this.pictureTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureTextBox.Name = "pictureTextBox";
             this.pictureTextBox.Size = new System.Drawing.Size(136, 26);
-            this.pictureTextBox.TabIndex = 11;
+            this.pictureTextBox.TabIndex = 7;
             // 
             // colorTextBox
             // 
@@ -263,7 +251,7 @@ namespace _8._12_eindopdracht
             this.colorTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(250, 26);
-            this.colorTextBox.TabIndex = 10;
+            this.colorTextBox.TabIndex = 4;
             // 
             // priceTextBox
             // 
@@ -271,7 +259,7 @@ namespace _8._12_eindopdracht
             this.priceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(250, 26);
-            this.priceTextBox.TabIndex = 9;
+            this.priceTextBox.TabIndex = 6;
             // 
             // typeTextbox
             // 
@@ -279,7 +267,7 @@ namespace _8._12_eindopdracht
             this.typeTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typeTextbox.Name = "typeTextbox";
             this.typeTextbox.Size = new System.Drawing.Size(250, 26);
-            this.typeTextbox.TabIndex = 8;
+            this.typeTextbox.TabIndex = 3;
             // 
             // numberOfDoorsTextBox
             // 
@@ -287,7 +275,7 @@ namespace _8._12_eindopdracht
             this.numberOfDoorsTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numberOfDoorsTextBox.Name = "numberOfDoorsTextBox";
             this.numberOfDoorsTextBox.Size = new System.Drawing.Size(250, 26);
-            this.numberOfDoorsTextBox.TabIndex = 7;
+            this.numberOfDoorsTextBox.TabIndex = 5;
             // 
             // brandTextBox
             // 
@@ -295,7 +283,7 @@ namespace _8._12_eindopdracht
             this.brandTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.brandTextBox.Name = "brandTextBox";
             this.brandTextBox.Size = new System.Drawing.Size(250, 26);
-            this.brandTextBox.TabIndex = 6;
+            this.brandTextBox.TabIndex = 2;
             // 
             // label7
             // 
@@ -372,7 +360,7 @@ namespace _8._12_eindopdracht
             this.changePriceTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.changePriceTextBox.Name = "changePriceTextBox";
             this.changePriceTextBox.Size = new System.Drawing.Size(217, 26);
-            this.changePriceTextBox.TabIndex = 3;
+            this.changePriceTextBox.TabIndex = 10;
             // 
             // label8
             // 
@@ -389,7 +377,7 @@ namespace _8._12_eindopdracht
             this.deleteCarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deleteCarButton.Name = "deleteCarButton";
             this.deleteCarButton.Size = new System.Drawing.Size(306, 35);
-            this.deleteCarButton.TabIndex = 1;
+            this.deleteCarButton.TabIndex = 12;
             this.deleteCarButton.Text = "Verwijder geselecteerde auto";
             this.deleteCarButton.UseVisualStyleBackColor = true;
             this.deleteCarButton.Click += new System.EventHandler(this.deleteCarButton_Click);
@@ -400,7 +388,7 @@ namespace _8._12_eindopdracht
             this.changePriceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.changePriceButton.Name = "changePriceButton";
             this.changePriceButton.Size = new System.Drawing.Size(217, 31);
-            this.changePriceButton.TabIndex = 0;
+            this.changePriceButton.TabIndex = 11;
             this.changePriceButton.Text = "Update vraagprijs";
             this.changePriceButton.UseVisualStyleBackColor = true;
             this.changePriceButton.Click += new System.EventHandler(this.changePriceButton_Click);
@@ -468,7 +456,6 @@ namespace _8._12_eindopdracht
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox colorRichTextBox;
         private System.Windows.Forms.OpenFileDialog openStockDialog;
         private System.Windows.Forms.SaveFileDialog saveStockDialog;
     }
