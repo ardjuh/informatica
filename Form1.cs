@@ -28,13 +28,16 @@ namespace _8._12_eindopdracht
 
         private void addCarButton_Click(object sender, EventArgs e)
         {
+            string picture = pictureTextBox.Text;
+            picture = picture.Substring(picture.IndexOf("Afbeeldingen\\") + 13, picture.IndexOf("."));
+
             Car newCar = new Car(
                 brandTextBox.Text,
                 typeTextbox.Text,
                 colorTextBox.Text,
                 int.Parse(numberOfDoorsTextBox.Text),
                 double.Parse(priceTextBox.Text),
-                pictureTextBox.Text
+                picture
             );
 
             carComboBox.Items.Add(newCar);
