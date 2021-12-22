@@ -28,8 +28,6 @@ namespace _8._12_eindopdracht
 
         private void addCarButton_Click(object sender, EventArgs e)
         {
-            string picture = pictureTextBox.Text;
-            picture = picture.Substring(picture.IndexOf("Afbeeldingen\\") + 13, picture.IndexOf("."));
 
             Car newCar = new Car(
                 brandTextBox.Text,
@@ -37,7 +35,7 @@ namespace _8._12_eindopdracht
                 colorTextBox.Text,
                 int.Parse(numberOfDoorsTextBox.Text),
                 double.Parse(priceTextBox.Text),
-                picture
+                pictureTextBox.Text
             );
 
             carComboBox.Items.Add(newCar);
@@ -112,10 +110,11 @@ namespace _8._12_eindopdracht
                 foreach (string car in cars)
                 {
                     List<string> y = new List<string>();
-                    foreach (string word in car.Split(';'))
-                    {
-                        y.AddRange(word.Split('='));
-                    }
+                    //foreach (string word in car.Split(';'))
+                    //{
+                    //    y.AddRange(word.Split('='));
+                  //  }
+                    y.AddRange(car.Split(';', '='));
 
                     string brand = y[1];
                     string type = y[3];
