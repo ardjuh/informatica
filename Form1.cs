@@ -29,7 +29,7 @@ namespace _8._12_eindopdracht
         private void addCarButton_Click(object sender, EventArgs e)
         {
             String picturePath = pictureTextBox.Text;
-            string picture = picturePath.Substring(picturePath.LastIndexOf("\\"));
+            string picture = picturePath.Substring(picturePath.LastIndexOf("\\") + 1); // get part after last \
             Bitmap bitmap = new Bitmap(picturePath);
             bitmap.Save(directory + picture);
 
