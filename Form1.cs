@@ -28,6 +28,10 @@ namespace _8._12_eindopdracht
 
         private void addCarButton_Click(object sender, EventArgs e)
         {
+            String picturePath = pictureTextBox.Text;
+            string picture = picturePath.Substring(picturePath.LastIndexOf("\\"));
+            Bitmap bitmap = new Bitmap(picturePath);
+            bitmap.Save(directory + picture);
 
             Car newCar = new Car(
                 brandTextBox.Text,
@@ -35,7 +39,7 @@ namespace _8._12_eindopdracht
                 colorTextBox.Text,
                 int.Parse(numberOfDoorsTextBox.Text),
                 double.Parse(priceTextBox.Text),
-                pictureTextBox.Text
+                picture
             );
 
             carComboBox.Items.Add(newCar);
