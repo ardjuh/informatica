@@ -39,6 +39,7 @@ namespace _8._12_eindopdracht
                 colorTextBox.Text,
                 int.Parse(numberOfDoorsTextBox.Text),
                 double.Parse(priceTextBox.Text),
+                "Goes",
                 picture
             );
 
@@ -113,18 +114,16 @@ namespace _8._12_eindopdracht
                 List<string> cars = File.ReadLines(settingsPath).ToList();
                 foreach (string car in cars)
                 {
-                    List<string> y = new List<string>();
-                    //foreach (string word in car.Split(';'))
-                    //{
-                    //    y.AddRange(word.Split('='));
-                  //  }
-                    y.AddRange(car.Split(';', '='));
+                    //   List<string> y = new List<string>();
+                    //   y.AddRange(car.Split(';', '='));
+                    List<string> y = car.Split(';', '=').ToList();
 
                     string brand = y[1];
                     string type = y[3];
                     string color = y[5];
                     int numberOfDoors = int.Parse(y[7]);
                     double price = double.Parse(y[9]);
+                    string location = "Goes";
                     string picture = "";
                     if (y[11] != "")
                     {
@@ -136,6 +135,7 @@ namespace _8._12_eindopdracht
                         color,
                         numberOfDoors,
                         price,
+                        location,
                         picture
                     );
                     carComboBox.Items.Add(newCar);
@@ -154,6 +154,7 @@ namespace _8._12_eindopdracht
                     ";color=" + auto.color +
                     ";numberOfDoorsn=" + auto.numberOfDoors +
                     ";price=" + auto.price +
+                    ";location=" + auto.location +
                     ";picture=" + auto.picture +
                     "\n";
             }

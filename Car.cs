@@ -13,6 +13,7 @@ namespace _8._12_eindopdracht
         public string color;
         public int numberOfDoors;
         public double price;
+        public string location;
         public string picture;
 
         public Car(
@@ -20,7 +21,8 @@ namespace _8._12_eindopdracht
             string _type, 
             string _color, 
             int _numberOfDoors, 
-            double _price, 
+            double _price,
+            string _location,
             string _picture
         )
         {
@@ -29,6 +31,7 @@ namespace _8._12_eindopdracht
             color = _color;
             numberOfDoors = _numberOfDoors;
             price = _price;
+            location = _location;
             picture = _picture;
         }
 
