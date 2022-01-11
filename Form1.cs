@@ -123,11 +123,11 @@ namespace _8._12_eindopdracht
                     string color = y[5];
                     int numberOfDoors = int.Parse(y[7]);
                     double price = double.Parse(y[9]);
-                    string location = "Goes";
+                    string location = y[11];
                     string picture = "";
-                    if (y[11] != "")
+                    if (y[13] != "")
                     {
-                        picture = y[11];
+                        picture = y[13];
                     }
                     Car newCar = new Car(
                         brand,
