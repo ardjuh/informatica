@@ -53,7 +53,6 @@ namespace _8._12_eindopdracht
             {
                 pictureTextBox.Text = openPictureDialog.FileName;
             }
-
         }
 
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +75,7 @@ namespace _8._12_eindopdracht
                 catch (Exception)
                 {
                     Console.WriteLine($"{selectedCar.picture} doesn't exist");
+                    carPictureBox.Hide();
                 }
             }
             else
@@ -114,28 +114,7 @@ namespace _8._12_eindopdracht
                 List<string> cars = File.ReadLines(settingsPath).ToList();
                 foreach (string car in cars)
                 {
-                    List<string> auto = car.Split(';', '=').ToList();
-
-                    string brand = auto[1];
-                    string type = auto[3];
-                    string color = auto[5];
-                    int numberOfDoors = int.Parse(auto[7]);
-                    double price = double.Parse(auto[9]);
-                    string location = auto[11];
-                    string picture = "";
-                    if (auto[13] != "")
-                    {
-                        picture = auto[13];
-                    }
-                    Car newCar = new Car(
-                        brand,
-                        type,
-                        color,
-                        numberOfDoors,
-                        price,
-                        location,
-                        picture
-                    );
+                    Car newCar = new Car(car);
                     carComboBox.Items.Add(newCar);
                 }
             }
@@ -144,17 +123,9 @@ namespace _8._12_eindopdracht
         private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             string cars = "";
-            foreach (object car in carComboBox.Items)
+            foreach (Car car in carComboBox.Items)
             {
-                Car auto = (Car)car;
-                cars += "brand=" + auto.brand +
-                    ";type=" + auto.type +
-                    ";color=" + auto.color +
-                    ";numberOfDoorsn=" + auto.numberOfDoors +
-                    ";price=" + auto.price +
-                    ";location=" + auto.location +
-                    ";picture=" + auto.picture +
-                    "\n";
+                cars += car.getDescription();
             }
             File.WriteAllText(settingsPath, cars);
         }

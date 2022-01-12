@@ -35,7 +35,34 @@ namespace _8._12_eindopdracht
             picture = _picture;
         }
 
+        public Car(string _car) // Second contstructor
+        {
+            List<string> car = _car.Split(';', '=').ToList();
+
+            brand = car[1];
+            type = car[3];
+            color = car[5];
+            numberOfDoors = int.Parse(car[7]);
+            price = double.Parse(car[9]);
+            location = car[11];
+            picture = "";
+            if (car[13] != "")
+            {
+                picture = car[13];
+            }
+        }
+
         public string getName() => brand + " " + type;
+
+        public string getDescription() => 
+            "brand=" + brand
+            + ";type=" + type
+            + ";color=" + color
+            + ";numberOfDoorsn=" + numberOfDoors
+            + ";price=" + price
+            + ";location=" + location
+            + ";picture=" + picture
+            + "\n";
 
         public bool containsPicture() => picture.Length > 0;
 
