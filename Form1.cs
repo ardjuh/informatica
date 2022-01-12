@@ -114,20 +114,18 @@ namespace _8._12_eindopdracht
                 List<string> cars = File.ReadLines(settingsPath).ToList();
                 foreach (string car in cars)
                 {
-                    //   List<string> y = new List<string>();
-                    //   y.AddRange(car.Split(';', '='));
-                    List<string> y = car.Split(';', '=').ToList();
+                    List<string> auto = car.Split(';', '=').ToList();
 
-                    string brand = y[1];
-                    string type = y[3];
-                    string color = y[5];
-                    int numberOfDoors = int.Parse(y[7]);
-                    double price = double.Parse(y[9]);
-                    string location = y[11];
+                    string brand = auto[1];
+                    string type = auto[3];
+                    string color = auto[5];
+                    int numberOfDoors = int.Parse(auto[7]);
+                    double price = double.Parse(auto[9]);
+                    string location = auto[11];
                     string picture = "";
-                    if (y[13] != "")
+                    if (auto[13] != "")
                     {
-                        picture = y[13];
+                        picture = auto[13];
                     }
                     Car newCar = new Car(
                         brand,
@@ -145,11 +143,11 @@ namespace _8._12_eindopdracht
 
         private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string x = "";
+            string cars = "";
             foreach (object car in carComboBox.Items)
             {
                 Car auto = (Car)car;
-                x += "brand=" + auto.brand +
+                cars += "brand=" + auto.brand +
                     ";type=" + auto.type +
                     ";color=" + auto.color +
                     ";numberOfDoorsn=" + auto.numberOfDoors +
@@ -158,7 +156,7 @@ namespace _8._12_eindopdracht
                     ";picture=" + auto.picture +
                     "\n";
             }
-            File.WriteAllText(settingsPath, x);
+            File.WriteAllText(settingsPath, cars);
         }
 
         private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;
