@@ -15,6 +15,7 @@ namespace _8._12_eindopdracht
     {
         private string settingsPath = "";
         private string directory = "";
+        private List<Car> cars = new List<Car>();
 
         public carGarageForm()
         {
@@ -94,7 +95,7 @@ namespace _8._12_eindopdracht
                 MessageBoxIcon.Asterisk
             ) == DialogResult.Yes)
             {
-                Car selectedCar = (Car)carComboBox.SelectedItem;
+                Car selectedCar = carComboBox.SelectedItem as Car;
                 carComboBox.Items.Remove(selectedCar);
             }
         }
@@ -103,18 +104,29 @@ namespace _8._12_eindopdracht
         {
             if (checkSelectedCar())
             {
-                Car selectedCar = (Car)carComboBox.SelectedItem;
-                selectedCar.setPrice(double.Parse(changePriceTextBox.Text));
+                Car selectedCar = carComboBox.SelectedItem as Car;
+                carComboBox.Items.Remove(selectedCar);
+                double price = double.Parse(changePriceTextBox.Text);
+                selectedCar.setPrice(price);
+                priceLabel.Text = "€ " + changePriceTextBox.Text;
+                carComboBox.Items.Add(selectedCar);
             }
         }
 
         private void carGarageForm_Load(object sender, EventArgs e)
         {
-            setCars();
+            if (File.ReadAllText(settingsPath).Length == 0)
+            {
+                return;
+            }
+            List<string> autos = File.ReadLines(settingsPath).ToList();
+            cars = autos.Select(car => new Car(car)).ToList();
+            carComboBox.Items.AddRange(cars.ToArray());
         }
 
         private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            setCars();
             string cars = "";
             foreach (Car car in carComboBox.Items)
             {
@@ -145,28 +157,24 @@ namespace _8._12_eindopdracht
 
         private void setCars(string location = "")
         {
-            if (File.ReadAllText(settingsPath).Length > 0)
+            carComboBox.Items.Clear();
+            
+            if (location == "")
             {
-                carComboBox.Items.Clear();
-                List<string> cars = File.ReadLines(settingsPath).ToList();
-                List<Car> autos = new List<Car>();
-                if (location == "")
+                autos = 
+            }
+            else
+            {
+                foreach (string car in cars)
                 {
-                    autos = cars.Select(car => new Car(car)).ToList();
-                }
-                else
-                {
-                    foreach(string car in cars)
+                    Car auto = new Car(car);
+                    if (auto.location == location)
                     {
-                        Car auto = new Car(car);
-                        if (auto.location == location)
-                        {
-                            autos.Add(auto);
-                        }
+                        autos.Add(auto);
                     }
                 }
-                carComboBox.Items.AddRange(autos.ToArray());
             }
+            carComboBox.Items.AddRange(autos.ToArray());
         }
     }
 }
