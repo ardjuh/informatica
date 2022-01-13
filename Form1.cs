@@ -163,7 +163,14 @@ namespace _8._12_eindopdracht
 
         private void setCars(string location = "")
         {
+            brandAndTypeLabel.Text = "";
+            colorLabel.BackColor = Color.Transparent;
+            numberOfDoorsLabel.Text = "";
+            priceLabel.Text = "";
+            locationlabel.Text = "";
             carComboBox.Items.Clear();
+            carPictureBox.Hide();
+            carComboBox.Text = "";
             if (location == "")
             {
                 carComboBox.Items.AddRange(cars.ToArray());
