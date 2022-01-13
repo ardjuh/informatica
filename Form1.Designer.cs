@@ -30,6 +30,8 @@ namespace _8._12_eindopdracht
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.locationlabel = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@ namespace _8._12_eindopdracht
             this.alleLocatiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.middelburgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label13 = new System.Windows.Forms.Label();
-            this.locationlabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -101,6 +101,23 @@ namespace _8._12_eindopdracht
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Voorraad";
+            // 
+            // locationlabel
+            // 
+            this.locationlabel.AutoSize = true;
+            this.locationlabel.Location = new System.Drawing.Point(182, 150);
+            this.locationlabel.Name = "locationlabel";
+            this.locationlabel.Size = new System.Drawing.Size(0, 20);
+            this.locationlabel.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 150);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Locatie:";
             // 
             // label12
             // 
@@ -409,7 +426,6 @@ namespace _8._12_eindopdracht
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.locatieToolStripMenuItem});
@@ -432,41 +448,23 @@ namespace _8._12_eindopdracht
             // alleLocatiesToolStripMenuItem
             // 
             this.alleLocatiesToolStripMenuItem.Name = "alleLocatiesToolStripMenuItem";
-            this.alleLocatiesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.alleLocatiesToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
             this.alleLocatiesToolStripMenuItem.Text = "Alle locaties";
             this.alleLocatiesToolStripMenuItem.Click += new System.EventHandler(this.alleLocatiesToolStripMenuItem_Click);
             // 
             // goesToolStripMenuItem
             // 
             this.goesToolStripMenuItem.Name = "goesToolStripMenuItem";
-            this.goesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.goesToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
             this.goesToolStripMenuItem.Text = "Goes";
             this.goesToolStripMenuItem.Click += new System.EventHandler(this.goesToolStripMenuItem_Click);
             // 
             // middelburgToolStripMenuItem
             // 
             this.middelburgToolStripMenuItem.Name = "middelburgToolStripMenuItem";
-            this.middelburgToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.middelburgToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
             this.middelburgToolStripMenuItem.Text = "Middelburg";
             this.middelburgToolStripMenuItem.Click += new System.EventHandler(this.middelburgToolStripMenuItem_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 150);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Locatie:";
-            // 
-            // locationlabel
-            // 
-            this.locationlabel.AutoSize = true;
-            this.locationlabel.Location = new System.Drawing.Point(182, 150);
-            this.locationlabel.Name = "locationlabel";
-            this.locationlabel.Size = new System.Drawing.Size(60, 20);
-            this.locationlabel.TabIndex = 13;
-            this.locationlabel.Text = "label14";
             // 
             // carGarageForm
             // 
