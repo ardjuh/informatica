@@ -112,11 +112,8 @@ namespace _8._12_eindopdracht
             if (File.ReadAllText(settingsPath).Length > 0)
             {
                 List<string> cars = File.ReadLines(settingsPath).ToList();
-                foreach (string car in cars)
-                {
-                    Car newCar = new Car(car);
-                    carComboBox.Items.Add(newCar);
-                }
+                List<Car> autos = cars.Select(car => new Car(car)).ToList();
+                carComboBox.Items.AddRange(autos.ToArray());
             }
         }
 
