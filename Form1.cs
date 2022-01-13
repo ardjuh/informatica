@@ -110,12 +110,7 @@ namespace _8._12_eindopdracht
 
         private void carGarageForm_Load(object sender, EventArgs e)
         {
-            if (File.ReadAllText(settingsPath).Length > 0)
-            {
-                List<string> cars = File.ReadLines(settingsPath).ToList();
-                List<Car> autos = cars.Select(car => new Car(car)).ToList();
-                carComboBox.Items.AddRange(autos.ToArray());
-            }
+            setCars();
         }
 
         private void carGarageForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -143,6 +138,29 @@ namespace _8._12_eindopdracht
         private void middelburgToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Text = "Voorraad Middelburg";
+        }
+
+        private void setCars(string location = "")
+        {
+            if (File.ReadAllText(settingsPath).Length > 0)
+            {
+                List<string> cars = File.ReadLines(settingsPath).ToList();
+                List<Car> autos = new List<Car>();
+                if (location == "")
+                {
+                    autos = cars.Select(car => new Car(car)).ToList();
+                }
+                else
+                {
+                    foreach(string car in cars)
+                    {
+                        car auto =
+                        if ()
+                        autos = cars.Select(car => if (car == location) new Car(car)).ToList();
+                    }
+                }
+                carComboBox.Items.AddRange(autos.ToArray());
+            }
         }
     }
 }
