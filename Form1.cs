@@ -112,7 +112,7 @@ namespace _8._12_eindopdracht
                 selectedCar.setPrice(price);
                 priceLabel.Text = "€ " + changePriceTextBox.Text;
                 cars.Add(selectedCar);
-                cars = cars.OrderBy(car => car.getName());
+                cars = cars.OrderBy(car => car.getName()).ToList();
                 carComboBox.Items.Clear();
                 carComboBox.Items.AddRange(cars.ToArray());
             }
@@ -126,7 +126,7 @@ namespace _8._12_eindopdracht
             }
             List<string> autos = File.ReadLines(settingsPath).ToList();
             cars = autos.Select(car => new Car(car)).ToList();
-            cars = cars.OrderBy(car => car.getName());
+            cars = cars.OrderBy(car => car.getName()).ToList();
             carComboBox.Items.AddRange(cars.ToArray());
         }
 
