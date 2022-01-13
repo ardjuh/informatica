@@ -64,14 +64,24 @@ namespace _8._12_eindopdracht
             this.openPictureDialog = new System.Windows.Forms.OpenFileDialog();
             this.openStockDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveStockDialog = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.locatieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alleLocatiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.middelburgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label13 = new System.Windows.Forms.Label();
+            this.locationlabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.locationlabel);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -83,11 +93,11 @@ namespace _8._12_eindopdracht
             this.groupBox1.Controls.Add(this.numberOfDoorsLabel);
             this.groupBox1.Controls.Add(this.colorLabel);
             this.groupBox1.Controls.Add(this.brandAndTypeLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(777, 340);
+            this.groupBox1.Size = new System.Drawing.Size(777, 342);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Voorraad";
@@ -397,6 +407,67 @@ namespace _8._12_eindopdracht
             // 
             this.openPictureDialog.Filter = "JPEG|*.jpg;*.jpeg;*.jpe;*.jfif|PNG|*.png";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.locatieToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(806, 33);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // locatieToolStripMenuItem
+            // 
+            this.locatieToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alleLocatiesToolStripMenuItem,
+            this.goesToolStripMenuItem,
+            this.middelburgToolStripMenuItem});
+            this.locatieToolStripMenuItem.Name = "locatieToolStripMenuItem";
+            this.locatieToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
+            this.locatieToolStripMenuItem.Text = "Locatie";
+            // 
+            // alleLocatiesToolStripMenuItem
+            // 
+            this.alleLocatiesToolStripMenuItem.Name = "alleLocatiesToolStripMenuItem";
+            this.alleLocatiesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.alleLocatiesToolStripMenuItem.Text = "Alle locaties";
+            this.alleLocatiesToolStripMenuItem.Click += new System.EventHandler(this.alleLocatiesToolStripMenuItem_Click);
+            // 
+            // goesToolStripMenuItem
+            // 
+            this.goesToolStripMenuItem.Name = "goesToolStripMenuItem";
+            this.goesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.goesToolStripMenuItem.Text = "Goes";
+            this.goesToolStripMenuItem.Click += new System.EventHandler(this.goesToolStripMenuItem_Click);
+            // 
+            // middelburgToolStripMenuItem
+            // 
+            this.middelburgToolStripMenuItem.Name = "middelburgToolStripMenuItem";
+            this.middelburgToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.middelburgToolStripMenuItem.Text = "Middelburg";
+            this.middelburgToolStripMenuItem.Click += new System.EventHandler(this.middelburgToolStripMenuItem_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 150);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Locatie:";
+            // 
+            // locationlabel
+            // 
+            this.locationlabel.AutoSize = true;
+            this.locationlabel.Location = new System.Drawing.Point(182, 150);
+            this.locationlabel.Name = "locationlabel";
+            this.locationlabel.Size = new System.Drawing.Size(60, 20);
+            this.locationlabel.TabIndex = 13;
+            this.locationlabel.Text = "label14";
+            // 
             // carGarageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -405,6 +476,8 @@ namespace _8._12_eindopdracht
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "carGarageForm";
             this.Text = "Autogarage";
@@ -417,7 +490,10 @@ namespace _8._12_eindopdracht
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -458,6 +534,13 @@ namespace _8._12_eindopdracht
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.OpenFileDialog openStockDialog;
         private System.Windows.Forms.SaveFileDialog saveStockDialog;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem locatieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alleLocatiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem middelburgToolStripMenuItem;
+        private System.Windows.Forms.Label locationlabel;
+        private System.Windows.Forms.Label label13;
     }
 }
 

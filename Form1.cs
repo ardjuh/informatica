@@ -63,6 +63,7 @@ namespace _8._12_eindopdracht
             colorLabel.BackColor = Color.FromName(selectedCar.color);
             numberOfDoorsLabel.Text = selectedCar.numberOfDoors.ToString();
             priceLabel.Text = selectedCar.getPrice();
+            locationlabel.Text = selectedCar.location;
 
             if (selectedCar.containsPicture())
             {
@@ -131,5 +132,20 @@ namespace _8._12_eindopdracht
         }
 
         private bool checkSelectedCar() => carComboBox.SelectedIndex > -1;
+
+        private void alleLocatiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Voorraad alle locaties";
+        }
+
+        private void goesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Voorraad Goes";
+        }
+
+        private void middelburgToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Voorraad Middelburg";
+        }
     }
 }
