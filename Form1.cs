@@ -128,22 +128,26 @@ namespace _8._12_eindopdracht
         private void alleLocatiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Text = "Voorraad alle locaties";
+            setCars();
         }
 
         private void goesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Text = "Voorraad Goes";
+            setCars("Goes");
         }
 
         private void middelburgToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Text = "Voorraad Middelburg";
+            setCars("Middelburg");
         }
 
         private void setCars(string location = "")
         {
             if (File.ReadAllText(settingsPath).Length > 0)
             {
+                carComboBox.Items.Clear();
                 List<string> cars = File.ReadLines(settingsPath).ToList();
                 List<Car> autos = new List<Car>();
                 if (location == "")
@@ -154,9 +158,11 @@ namespace _8._12_eindopdracht
                 {
                     foreach(string car in cars)
                     {
-                        car auto =
-                        if ()
-                        autos = cars.Select(car => if (car == location) new Car(car)).ToList();
+                        Car auto = new Car(car);
+                        if (auto.location == location)
+                        {
+                            autos.Add(auto);
+                        }
                     }
                 }
                 carComboBox.Items.AddRange(autos.ToArray());
