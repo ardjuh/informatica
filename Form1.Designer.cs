@@ -44,6 +44,8 @@ namespace _8._12_eindopdracht
             this.colorLabel = new System.Windows.Forms.Label();
             this.brandAndTypeLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.addCarButton = new System.Windows.Forms.Button();
             this.selectPictureButton = new System.Windows.Forms.Button();
             this.pictureTextBox = new System.Windows.Forms.TextBox();
@@ -93,11 +95,11 @@ namespace _8._12_eindopdracht
             this.groupBox1.Controls.Add(this.numberOfDoorsLabel);
             this.groupBox1.Controls.Add(this.colorLabel);
             this.groupBox1.Controls.Add(this.brandAndTypeLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 46);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(8, 30);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(777, 342);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBox1.Size = new System.Drawing.Size(518, 222);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Voorraad";
@@ -105,62 +107,68 @@ namespace _8._12_eindopdracht
             // locationlabel
             // 
             this.locationlabel.AutoSize = true;
-            this.locationlabel.Location = new System.Drawing.Point(182, 150);
+            this.locationlabel.Location = new System.Drawing.Point(121, 98);
+            this.locationlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.locationlabel.Name = "locationlabel";
-            this.locationlabel.Size = new System.Drawing.Size(0, 20);
+            this.locationlabel.Size = new System.Drawing.Size(0, 13);
             this.locationlabel.TabIndex = 13;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 150);
+            this.label13.Location = new System.Drawing.Point(4, 98);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(45, 13);
             this.label13.TabIndex = 12;
             this.label13.Text = "Locatie:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 282);
+            this.label12.Location = new System.Drawing.Point(5, 183);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 20);
+            this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 11;
             this.label12.Text = "Vraagprijs:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 249);
+            this.label11.Location = new System.Drawing.Point(5, 162);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 20);
+            this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 10;
             this.label11.Text = "Aantal deuren:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 215);
+            this.label10.Location = new System.Drawing.Point(5, 140);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 20);
+            this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 9;
             this.label10.Text = "Kleur:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 182);
+            this.label9.Location = new System.Drawing.Point(5, 118);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 20);
+            this.label9.Size = new System.Drawing.Size(72, 13);
             this.label9.TabIndex = 8;
             this.label9.Text = "Merk en type:";
             // 
             // carPictureBox
             // 
-            this.carPictureBox.Location = new System.Drawing.Point(387, 24);
-            this.carPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carPictureBox.Location = new System.Drawing.Point(258, 16);
+            this.carPictureBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.carPictureBox.Name = "carPictureBox";
-            this.carPictureBox.Size = new System.Drawing.Size(375, 296);
+            this.carPictureBox.Size = new System.Drawing.Size(250, 192);
             this.carPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.carPictureBox.TabIndex = 7;
             this.carPictureBox.TabStop = false;
@@ -168,57 +176,64 @@ namespace _8._12_eindopdracht
             // carComboBox
             // 
             this.carComboBox.FormattingEnabled = true;
-            this.carComboBox.Location = new System.Drawing.Point(10, 70);
-            this.carComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carComboBox.Location = new System.Drawing.Point(7, 46);
+            this.carComboBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.carComboBox.Name = "carComboBox";
-            this.carComboBox.Size = new System.Drawing.Size(242, 28);
+            this.carComboBox.Size = new System.Drawing.Size(163, 21);
             this.carComboBox.TabIndex = 1;
             this.carComboBox.SelectedIndexChanged += new System.EventHandler(this.carComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 48);
+            this.label1.Location = new System.Drawing.Point(4, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Selecteer een auto:";
             // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
-            this.priceLabel.Location = new System.Drawing.Point(178, 282);
+            this.priceLabel.Location = new System.Drawing.Point(119, 183);
+            this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(0, 20);
+            this.priceLabel.Size = new System.Drawing.Size(0, 13);
             this.priceLabel.TabIndex = 3;
             // 
             // numberOfDoorsLabel
             // 
             this.numberOfDoorsLabel.AutoSize = true;
-            this.numberOfDoorsLabel.Location = new System.Drawing.Point(178, 249);
+            this.numberOfDoorsLabel.Location = new System.Drawing.Point(119, 162);
+            this.numberOfDoorsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.numberOfDoorsLabel.Name = "numberOfDoorsLabel";
-            this.numberOfDoorsLabel.Size = new System.Drawing.Size(0, 20);
+            this.numberOfDoorsLabel.Size = new System.Drawing.Size(0, 13);
             this.numberOfDoorsLabel.TabIndex = 2;
             // 
             // colorLabel
             // 
             this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(178, 215);
+            this.colorLabel.Location = new System.Drawing.Point(119, 140);
+            this.colorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.colorLabel.Name = "colorLabel";
-            this.colorLabel.Size = new System.Drawing.Size(41, 20);
+            this.colorLabel.Size = new System.Drawing.Size(31, 13);
             this.colorLabel.TabIndex = 1;
             this.colorLabel.Text = "        ";
             // 
             // brandAndTypeLabel
             // 
             this.brandAndTypeLabel.AutoSize = true;
-            this.brandAndTypeLabel.Location = new System.Drawing.Point(178, 182);
+            this.brandAndTypeLabel.Location = new System.Drawing.Point(119, 118);
+            this.brandAndTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.brandAndTypeLabel.Name = "brandAndTypeLabel";
-            this.brandAndTypeLabel.Size = new System.Drawing.Size(0, 20);
+            this.brandAndTypeLabel.Size = new System.Drawing.Size(0, 13);
             this.brandAndTypeLabel.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.addCarButton);
             this.groupBox2.Controls.Add(this.selectPictureButton);
             this.groupBox2.Controls.Add(this.pictureTextBox);
@@ -233,21 +248,38 @@ namespace _8._12_eindopdracht
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 358);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(8, 233);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(420, 301);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBox2.Size = new System.Drawing.Size(280, 208);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nieuwe auto";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 129);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Location:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(98, 126);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 21);
+            this.comboBox1.TabIndex = 10;
+            // 
             // addCarButton
             // 
-            this.addCarButton.Location = new System.Drawing.Point(147, 242);
-            this.addCarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addCarButton.Location = new System.Drawing.Point(98, 178);
+            this.addCarButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.addCarButton.Name = "addCarButton";
-            this.addCarButton.Size = new System.Drawing.Size(251, 40);
+            this.addCarButton.Size = new System.Drawing.Size(167, 26);
             this.addCarButton.TabIndex = 9;
             this.addCarButton.Text = "Toevoegen";
             this.addCarButton.UseVisualStyleBackColor = true;
@@ -255,10 +287,10 @@ namespace _8._12_eindopdracht
             // 
             // selectPictureButton
             // 
-            this.selectPictureButton.Location = new System.Drawing.Point(291, 194);
-            this.selectPictureButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.selectPictureButton.Location = new System.Drawing.Point(194, 150);
+            this.selectPictureButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectPictureButton.Name = "selectPictureButton";
-            this.selectPictureButton.Size = new System.Drawing.Size(107, 31);
+            this.selectPictureButton.Size = new System.Drawing.Size(71, 20);
             this.selectPictureButton.TabIndex = 8;
             this.selectPictureButton.Text = "Selecteer...";
             this.selectPictureButton.UseVisualStyleBackColor = true;
@@ -266,103 +298,109 @@ namespace _8._12_eindopdracht
             // 
             // pictureTextBox
             // 
-            this.pictureTextBox.Location = new System.Drawing.Point(147, 194);
-            this.pictureTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureTextBox.Location = new System.Drawing.Point(98, 151);
+            this.pictureTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureTextBox.Name = "pictureTextBox";
-            this.pictureTextBox.Size = new System.Drawing.Size(136, 26);
+            this.pictureTextBox.Size = new System.Drawing.Size(92, 20);
             this.pictureTextBox.TabIndex = 7;
             // 
             // colorTextBox
             // 
-            this.colorTextBox.Location = new System.Drawing.Point(147, 98);
-            this.colorTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.colorTextBox.Location = new System.Drawing.Point(98, 59);
+            this.colorTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.colorTextBox.Name = "colorTextBox";
-            this.colorTextBox.Size = new System.Drawing.Size(250, 26);
+            this.colorTextBox.Size = new System.Drawing.Size(168, 20);
             this.colorTextBox.TabIndex = 4;
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(147, 162);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.priceTextBox.Location = new System.Drawing.Point(98, 102);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(250, 26);
+            this.priceTextBox.Size = new System.Drawing.Size(168, 20);
             this.priceTextBox.TabIndex = 6;
             // 
             // typeTextbox
             // 
-            this.typeTextbox.Location = new System.Drawing.Point(147, 66);
-            this.typeTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.typeTextbox.Location = new System.Drawing.Point(98, 37);
+            this.typeTextbox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.typeTextbox.Name = "typeTextbox";
-            this.typeTextbox.Size = new System.Drawing.Size(250, 26);
+            this.typeTextbox.Size = new System.Drawing.Size(168, 20);
             this.typeTextbox.TabIndex = 3;
             // 
             // numberOfDoorsTextBox
             // 
-            this.numberOfDoorsTextBox.Location = new System.Drawing.Point(147, 130);
-            this.numberOfDoorsTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numberOfDoorsTextBox.Location = new System.Drawing.Point(98, 81);
+            this.numberOfDoorsTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.numberOfDoorsTextBox.Name = "numberOfDoorsTextBox";
-            this.numberOfDoorsTextBox.Size = new System.Drawing.Size(250, 26);
+            this.numberOfDoorsTextBox.Size = new System.Drawing.Size(168, 20);
             this.numberOfDoorsTextBox.TabIndex = 5;
             // 
             // brandTextBox
             // 
-            this.brandTextBox.Location = new System.Drawing.Point(147, 34);
-            this.brandTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.brandTextBox.Location = new System.Drawing.Point(98, 15);
+            this.brandTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.brandTextBox.Name = "brandTextBox";
-            this.brandTextBox.Size = new System.Drawing.Size(250, 26);
+            this.brandTextBox.Size = new System.Drawing.Size(168, 20);
             this.brandTextBox.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 204);
+            this.label7.Location = new System.Drawing.Point(5, 154);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Afbeelding:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 172);
+            this.label6.Location = new System.Drawing.Point(4, 105);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Vraagprijs:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 139);
+            this.label5.Location = new System.Drawing.Point(5, 84);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 20);
+            this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Aantal deuren:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 108);
+            this.label4.Location = new System.Drawing.Point(5, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Kleur:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 72);
+            this.label3.Location = new System.Drawing.Point(4, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Type:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 40);
+            this.label2.Location = new System.Drawing.Point(4, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Merk:";
             // 
@@ -372,38 +410,39 @@ namespace _8._12_eindopdracht
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.deleteCarButton);
             this.groupBox3.Controls.Add(this.changePriceButton);
-            this.groupBox3.Location = new System.Drawing.Point(458, 358);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(305, 233);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(332, 301);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBox3.Size = new System.Drawing.Size(221, 204);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Wijzigingen";
             // 
             // changePriceTextBox
             // 
-            this.changePriceTextBox.Location = new System.Drawing.Point(99, 51);
-            this.changePriceTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changePriceTextBox.Location = new System.Drawing.Point(66, 33);
+            this.changePriceTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.changePriceTextBox.Name = "changePriceTextBox";
-            this.changePriceTextBox.Size = new System.Drawing.Size(217, 26);
+            this.changePriceTextBox.Size = new System.Drawing.Size(146, 20);
             this.changePriceTextBox.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 55);
+            this.label8.Location = new System.Drawing.Point(5, 36);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 2;
             this.label8.Text = "Vraagprijs:";
             // 
             // deleteCarButton
             // 
-            this.deleteCarButton.Location = new System.Drawing.Point(10, 242);
-            this.deleteCarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteCarButton.Location = new System.Drawing.Point(7, 176);
+            this.deleteCarButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.deleteCarButton.Name = "deleteCarButton";
-            this.deleteCarButton.Size = new System.Drawing.Size(306, 35);
+            this.deleteCarButton.Size = new System.Drawing.Size(204, 23);
             this.deleteCarButton.TabIndex = 12;
             this.deleteCarButton.Text = "Verwijder geselecteerde auto";
             this.deleteCarButton.UseVisualStyleBackColor = true;
@@ -411,10 +450,10 @@ namespace _8._12_eindopdracht
             // 
             // changePriceButton
             // 
-            this.changePriceButton.Location = new System.Drawing.Point(99, 98);
-            this.changePriceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changePriceButton.Location = new System.Drawing.Point(66, 64);
+            this.changePriceButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.changePriceButton.Name = "changePriceButton";
-            this.changePriceButton.Size = new System.Drawing.Size(217, 31);
+            this.changePriceButton.Size = new System.Drawing.Size(145, 20);
             this.changePriceButton.TabIndex = 11;
             this.changePriceButton.Text = "Update vraagprijs";
             this.changePriceButton.UseVisualStyleBackColor = true;
@@ -431,7 +470,8 @@ namespace _8._12_eindopdracht
             this.locatieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(806, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(537, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -442,41 +482,41 @@ namespace _8._12_eindopdracht
             this.goesToolStripMenuItem,
             this.middelburgToolStripMenuItem});
             this.locatieToolStripMenuItem.Name = "locatieToolStripMenuItem";
-            this.locatieToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
+            this.locatieToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
             this.locatieToolStripMenuItem.Text = "Locatie";
             // 
             // alleLocatiesToolStripMenuItem
             // 
             this.alleLocatiesToolStripMenuItem.Name = "alleLocatiesToolStripMenuItem";
-            this.alleLocatiesToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.alleLocatiesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.alleLocatiesToolStripMenuItem.Text = "Alle locaties";
             this.alleLocatiesToolStripMenuItem.Click += new System.EventHandler(this.alleLocatiesToolStripMenuItem_Click);
             // 
             // goesToolStripMenuItem
             // 
             this.goesToolStripMenuItem.Name = "goesToolStripMenuItem";
-            this.goesToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.goesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.goesToolStripMenuItem.Text = "Goes";
             this.goesToolStripMenuItem.Click += new System.EventHandler(this.goesToolStripMenuItem_Click);
             // 
             // middelburgToolStripMenuItem
             // 
             this.middelburgToolStripMenuItem.Name = "middelburgToolStripMenuItem";
-            this.middelburgToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.middelburgToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.middelburgToolStripMenuItem.Text = "Middelburg";
             this.middelburgToolStripMenuItem.Click += new System.EventHandler(this.middelburgToolStripMenuItem_Click);
             // 
             // carGarageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 671);
+            this.ClientSize = new System.Drawing.Size(537, 444);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "carGarageForm";
             this.Text = "Autogarage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.carGarageForm_FormClosing);
@@ -539,6 +579,8 @@ namespace _8._12_eindopdracht
         private System.Windows.Forms.ToolStripMenuItem middelburgToolStripMenuItem;
         private System.Windows.Forms.Label locationlabel;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
