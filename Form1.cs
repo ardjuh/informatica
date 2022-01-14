@@ -29,7 +29,13 @@ namespace _8._12_eindopdracht
 
         private void addCarButton_Click(object sender, EventArgs e)
         {
+            string brandText = brandTextBox.Text;
+            string typeText = typeTextbox.Text;
+            string colorText = colorTextBox.Text;
+            string numberOfDoorsText = numberOfDoorsTextBox.Text;
+            string priceText = priceTextBox.Text;
             String picturePath = pictureTextBox.Text;
+
             string picture = picturePath.Substring(picturePath.LastIndexOf("\\") + 1); // get part after last \
             Bitmap bitmap = new Bitmap(picturePath);
             bitmap.Save(directory + picture);
@@ -66,7 +72,7 @@ namespace _8._12_eindopdracht
 
         private void carComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Car selectedCar = (Car)carComboBox.SelectedItem;
+            Car selectedCar = carComboBox.SelectedItem as Car;
 
             brandAndTypeLabel.Text = selectedCar.getName();
             colorLabel.BackColor = Color.FromName(selectedCar.color);
