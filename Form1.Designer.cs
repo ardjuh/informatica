@@ -45,7 +45,7 @@ namespace _8._12_eindopdracht
             this.brandAndTypeLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.locationComboBox = new System.Windows.Forms.ComboBox();
             this.addCarButton = new System.Windows.Forms.Button();
             this.selectPictureButton = new System.Windows.Forms.Button();
             this.pictureTextBox = new System.Windows.Forms.TextBox();
@@ -233,7 +233,7 @@ namespace _8._12_eindopdracht
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.locationComboBox);
             this.groupBox2.Controls.Add(this.addCarButton);
             this.groupBox2.Controls.Add(this.selectPictureButton);
             this.groupBox2.Controls.Add(this.pictureTextBox);
@@ -266,13 +266,16 @@ namespace _8._12_eindopdracht
             this.label14.TabIndex = 11;
             this.label14.Text = "Location:";
             // 
-            // comboBox1
+            // locationComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 10;
+            this.locationComboBox.FormattingEnabled = true;
+            this.locationComboBox.Items.AddRange(new object[] {
+            "Goes",
+            "Middelburg"});
+            this.locationComboBox.Location = new System.Drawing.Point(98, 126);
+            this.locationComboBox.Name = "locationComboBox";
+            this.locationComboBox.Size = new System.Drawing.Size(167, 21);
+            this.locationComboBox.TabIndex = 10;
             // 
             // addCarButton
             // 
@@ -580,7 +583,7 @@ namespace _8._12_eindopdracht
         private System.Windows.Forms.Label locationlabel;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox locationComboBox;
     }
 }
 

@@ -1,4 +1,5 @@
 brand=Audi;type=R3;color=Green;numberOfDoorsn=5;price=25000;location=Middelburg;picture=audiR3.jpg
 brand=Ferrari;type=458;color=Red;numberOfDoorsn=2;price=150000;location=Goes;picture=ferrari 458.jpg
 brand=Fiat;type=Multipla;color=yellow;numberOfDoorsn=5;price=1900;location=Goes;picture=FiatMultipla.jpg
+brand=Tesla;type=Model S;color=black;numberOfDoorsn=5;price=43500;location=Goes;picture=teslaModelS.jpg
 brand=Volvo;type=XC90;color=Black;numberOfDoorsn=4;price=100000;location=Middelburg;picture=volvo XC90.jpg

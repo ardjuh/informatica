@@ -34,7 +34,8 @@ namespace _8._12_eindopdracht
             string colorText = colorTextBox.Text;
             string numberOfDoorsText = numberOfDoorsTextBox.Text;
             string priceText = priceTextBox.Text;
-            String picturePath = pictureTextBox.Text;
+            string locationText = locationComboBox.Text;
+            string picturePath = pictureTextBox.Text;
 
             string picture = picturePath.Substring(picturePath.LastIndexOf("\\") + 1); // get part after last \
             Bitmap bitmap = new Bitmap(picturePath);
@@ -46,7 +47,7 @@ namespace _8._12_eindopdracht
                 colorTextBox.Text,
                 int.Parse(numberOfDoorsTextBox.Text),
                 double.Parse(priceTextBox.Text),
-                "Goes",
+                locationText,
                 picture
             );
 
@@ -60,6 +61,8 @@ namespace _8._12_eindopdracht
             colorTextBox.Clear();
             numberOfDoorsTextBox.Clear();
             priceTextBox.Clear();
+            locationComboBox.SelectedItem = null;
+            pictureTextBox.Clear();
         }
 
         private void selectPictureButton_Click(object sender, EventArgs e)
@@ -184,6 +187,7 @@ namespace _8._12_eindopdracht
             locationlabel.Text = "";
             carComboBox.Items.Clear();
             carPictureBox.Hide();
+            locationComboBox.SelectedItem = null;
             carComboBox.Text = "";
             if (location == "")
             {
