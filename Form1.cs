@@ -44,8 +44,16 @@ namespace _8._12_eindopdracht
                 picture
             );
 
+            cars.Add(newCar);
+            cars = cars.OrderBy(car => car.getName()).ToList();
             carComboBox.Items.Add(newCar);
             carComboBox.SelectedItem = newCar;
+
+            brandTextBox.Clear();
+            typeTextbox.Clear();
+            colorTextBox.Clear();
+            numberOfDoorsTextBox.Clear();
+            priceTextBox.Clear();
         }
 
         private void selectPictureButton_Click(object sender, EventArgs e)
